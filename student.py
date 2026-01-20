@@ -1,6 +1,6 @@
 import os
 from flask import Flask,request,render_template
-app=Flask(__name__,template_folder='.')
+app=Flask(__name__,template_folder='templates')
 import sqlite3
 DB_PATH = "/tmp/student.db"
 def init_db():
@@ -78,6 +78,7 @@ def delete_student():
 if __name__ =="__main__":
     port =int(os.environ.get("PORT",10000))
     app.run(host='0.0.0.0' , port=port)
+
 
 
 
